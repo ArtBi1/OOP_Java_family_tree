@@ -15,10 +15,10 @@ public class Main {
         FamilyTree<Human> tree = new FamilyTree<>(); // Создание объекта FamilyTree для хранения информации о с.дереве
 
         Human vanya = new Human("Ваня", Gender.Male, LocalDate.of(1963, 12, 10)); // Создание объектов Human для 
-        Human katya = new Human("Мария", Gender.Female, LocalDate.of(1965, 9, 15)); // представления членов семьи
-        Human olya = new Human("Кристина", Gender.Female, LocalDate.of(1988, 7, 5), // с различными данными
+        Human katya = new Human("Катя", Gender.Female, LocalDate.of(1965, 9, 15)); // представления членов семьи
+        Human olya = new Human("Оля", Gender.Female, LocalDate.of(1988, 7, 5), // с различными данными
                 vanya, katya); // Оля - дочь Вани и Кати
-        Human igor = new Human("Семен", Gender.Male, LocalDate.of(1991, 1, 25),
+        Human igor = new Human("Игорь", Gender.Male, LocalDate.of(1991, 1, 25),
                 vanya, katya); // Игорь - сын Вани и Кати
 
         tree.add(vanya);// Добавление объектов Human в семейное дерево
