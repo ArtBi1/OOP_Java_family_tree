@@ -14,21 +14,21 @@ public class Main {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
         FamilyTree<Human> tree = new FamilyTree<>(); // Создание объекта FamilyTree для хранения информации о с.дереве
 
-        Human vasya = new Human("Василий", Gender.Male, LocalDate.of(1963, 12, 10)); // Создание объектов Human для 
-        Human masha = new Human("Мария", Gender.Female, LocalDate.of(1965, 9, 15)); // представления членов семьи
-        Human christina = new Human("Кристина", Gender.Female, LocalDate.of(1988, 7, 5), // с различными данными
-                vasya, masha); // Кристина - дочь Василия и Марии
-        Human semyon = new Human("Семен", Gender.Male, LocalDate.of(1991, 1, 25),
-                vasya, masha); // Семен - сын Василия и Марии
+        Human vanya = new Human("Ваня", Gender.Male, LocalDate.of(1963, 12, 10)); // Создание объектов Human для 
+        Human katya = new Human("Мария", Gender.Female, LocalDate.of(1965, 9, 15)); // представления членов семьи
+        Human olya = new Human("Кристина", Gender.Female, LocalDate.of(1988, 7, 5), // с различными данными
+                vanya, katya); // Оля - дочь Вани и Кати
+        Human igor = new Human("Семен", Gender.Male, LocalDate.of(1991, 1, 25),
+                vanya, katya); // Игорь - сын Вани и Кати
 
-        tree.add(vasya);// Добавление объектов Human в семейное дерево
-        tree.add(masha);
-        tree.add(christina);
-        tree.add(semyon);
+        tree.add(vanya);// Добавление объектов Human в семейное дерево
+        tree.add(katya);
+        tree.add(olya);
+        tree.add(igor);
 
         // Создание и добавление бабушки в семейное дерево
-        Human grandMother = new Human("Лариса", Gender.Female, LocalDate.of(1945, 9, 1));
-        grandMother.addChild(vasya); // Внесение Василия как ребенка бабушки
+        Human grandMother = new Human("Маша", Gender.Female, LocalDate.of(1945, 9, 1));
+        grandMother.addChild(vanya); // Внесение Василия как ребенка бабушки
 
         tree.add(grandMother);
 
